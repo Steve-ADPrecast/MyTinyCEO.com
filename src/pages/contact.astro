@@ -23,7 +23,7 @@ import Footer from '../components/Footer.astro';
         <!-- Contact Form -->
         <div>
           <h2 class="text-2xl font-heading font-bold text-steel-blue mb-6">Send a Message</h2>
-          <form class="space-y-4">
+          <form id="contact-form" class="space-y-4">
             <div>
               <label for="name" class="block text-sm font-semibold text-charcoal mb-2">Name</label>
               <input
@@ -74,14 +74,76 @@ import Footer from '../components/Footer.astro';
               ></textarea>
             </div>
 
-            <button type="submit" class="btn-primary w-full">
+            <button type="submit" id="submit-btn" class="btn-primary w-full">
               Send Message
             </button>
 
-            <p class="text-xs text-gray-500 text-center">
-              Note: This form will be connected to an email service before launch.
-            </p>
+            <!-- Status messages -->
+            <div id="form-status" class="text-center text-sm hidden">
+              <!-- Success/error messages will appear here -->
+            </div>
           </form>
+
+          <script>
+            const form = document.getElementById('contact-form') as HTMLFormElement;
+            const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+            const statusDiv = document.getElementById('form-status') as HTMLDivElement;
+
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+
+              // Get form data
+              const formData = new FormData(form);
+              const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                category: formData.get('category'),
+                message: formData.get('message')
+              };
+
+              // Disable submit button and show loading state
+              submitBtn.disabled = true;
+              submitBtn.textContent = 'Sending...';
+              statusDiv.classList.add('hidden');
+
+              try {
+                // Send POST request to API endpoint
+                const response = await fetch('/api/contact', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                  // Show success message
+                  statusDiv.textContent = '✓ Message sent successfully! I\'ll get back to you within 24-48 hours.';
+                  statusDiv.className = 'text-center text-sm p-3 bg-green-100 text-green-700 rounded-lg';
+                  statusDiv.classList.remove('hidden');
+
+                  // Clear form
+                  form.reset();
+                } else {
+                  // Show error message
+                  statusDiv.textContent = '✗ ' + (result.error || 'Failed to send message. Please try emailing directly.');
+                  statusDiv.className = 'text-center text-sm p-3 bg-red-100 text-red-700 rounded-lg';
+                  statusDiv.classList.remove('hidden');
+                }
+              } catch (error) {
+                // Show error message
+                statusDiv.textContent = '✗ Network error. Please check your connection and try again.';
+                statusDiv.className = 'text-center text-sm p-3 bg-red-100 text-red-700 rounded-lg';
+                statusDiv.classList.remove('hidden');
+              } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+              }
+            });
+          </script>
         </div>
 
         <!-- Direct Contact Info -->
