@@ -1,0 +1,30 @@
+---
+interface Props {
+  headline: string;
+  subheadline: string;
+  ctaText?: string;
+  ctaLink?: string;
+  showCTA?: boolean;
+}
+
+const { headline, subheadline, ctaText = "Get Started", ctaLink = "#", showCTA = true } = Astro.props;
+---
+
+<section class="bg-gradient-to-br from-[#1e3a5f] to-[#1B6B6B] text-white py-20 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-white">
+      {headline}
+    </h1>
+    <p class="text-lg md:text-xl font-body mb-8 text-white opacity-95 max-w-2xl mx-auto">
+      {subheadline}
+    </p>
+    {showCTA && (
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <span class="bg-tech-teal text-white font-cta font-medium px-8 py-3 rounded-lg shadow-lg cursor-not-allowed">
+          Launching November 2025
+        </span>
+        <slot />
+      </div>
+    )}
+  </div>
+</section>

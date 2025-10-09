@@ -1,0 +1,45 @@
+---
+interface Props {
+  tier: string;
+  price: string;
+  period?: string;
+  features: string[];
+  recommended?: boolean;
+  comingSoon?: boolean;
+}
+
+const { tier, price, period, features, recommended = false, comingSoon = true } = Astro.props;
+---
+
+<div class={`rounded-lg shadow-lg p-8 ${recommended ? 'ring-2 ring-tech-teal bg-white' : 'bg-white'} ${comingSoon ? 'opacity-75' : ''}`}>
+  {recommended && (
+    <div class="bg-tech-teal text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+      RECOMMENDED
+    </div>
+  )}
+
+  <h3 class="text-2xl font-heading font-bold text-steel-blue mb-2">{tier}</h3>
+
+  <div class="mb-6">
+    <span class="text-4xl font-bold text-charcoal">{price}</span>
+    {period && <span class="text-gray-600">/{period}</span>}
+  </div>
+
+  <ul class="space-y-3 mb-8">
+    {features.map(feature => (
+      <li class="flex items-start">
+        <svg class="w-5 h-5 text-tech-teal mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        <span class="text-sm text-charcoal">{feature}</span>
+      </li>
+    ))}
+  </ul>
+
+  <button
+    disabled={comingSoon}
+    class={`w-full btn-primary text-center ${comingSoon ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
+  >
+    {comingSoon ? 'Coming Soon' : 'Get Started'}
+  </button>
+</div>

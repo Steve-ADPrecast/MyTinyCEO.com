@@ -1,0 +1,177 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQItem from '../components/FAQ.tsx';
+---
+
+<Layout
+  title="FAQ - MyTinyCEO"
+  description="Frequently asked questions about MyTinyCEO - your AI-powered business planning tool."
+>
+  <Header />
+
+  <section class="py-20 bg-gradient-to-br from-[#1e3a5f] to-[#1B6B6B] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 text-white">Frequently Asked Questions</h1>
+      <p class="text-xl text-white opacity-95">Everything you need to know about MyTinyCEO</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Getting Started -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-heading font-bold text-steel-blue mb-6">Getting Started</h2>
+        <div class="space-y-2">
+          <FAQItem
+            client:load
+            question="What is MyTinyCEO?"
+            answer="MyTinyCEO is an AI-powered business planning tool that guides you through building investor-ready plans using proven frameworks from top business schools—explained in plain English."
+          />
+          <FAQItem
+            client:load
+            question="Who is this for?"
+            answer="Solopreneurs, first-time founders, small business owners applying for loans, and anyone who needs a professional business plan but doesn't have a finance background."
+          />
+          <FAQItem
+            client:load
+            question="Do I need finance experience?"
+            answer="Nope! That's the whole point. Tiny (our AI mentor) explains everything as you go."
+          />
+          <FAQItem
+            client:load
+            question="How long does it take to build a plan?"
+            answer="Most founders complete their first draft in 30-60 minutes. You can refine and iterate from there."
+          />
+        </div>
+      </div>
+
+      <!-- Features & Functionality -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-heading font-bold text-steel-blue mb-6">Features & Functionality</h2>
+        <div class="space-y-2">
+          <FAQItem
+            client:load
+            question="What frameworks does MyTinyCEO use?"
+            answer="TAM/SAM/SOM market sizing, Value Stick pricing analysis, Unit Economics modeling, Scenario Planning, and complete financial statements (P&L, cash flow, balance sheet)."
+          />
+          <FAQItem
+            client:load
+            question="What is 'Tiny' the AI mentor?"
+            answer="Tiny is your AI business strategist. Ask questions like 'What's a good gross margin?' or 'Is my CAC too high?' and get instant, context-aware answers based on YOUR business data."
+          />
+          <FAQItem
+            client:load
+            question="Can I export to PDF?"
+            answer="Yes, with the Pro plan ($32/mo or $340/yr). Free plan allows viewing and shareable links, but no PDF export."
+          />
+          <FAQItem
+            client:load
+            question="Can I collaborate with co-founders?"
+            answer="Not yet, but it's on the roadmap! For now, you can share live dashboard links."
+          />
+        </div>
+      </div>
+
+      <!-- Pricing & Plans -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-heading font-bold text-steel-blue mb-6">Pricing & Plans</h2>
+        <div class="space-y-2">
+          <FAQItem
+            client:load
+            question="Is there a free trial?"
+            answer="The Free plan is forever free for 1 project. You can explore all features, but PDF exports require Pro."
+          />
+          <FAQItem
+            client:load
+            question="What's the difference between Monthly and Annual Pro?"
+            answer="Same features (10 projects, PDF export, no watermark). Annual plan saves you $44/year."
+          />
+          <FAQItem
+            client:load
+            question="Can I cancel anytime?"
+            answer="Yes, cancel anytime from your dashboard. No questions asked."
+          />
+          <FAQItem
+            client:load
+            question="What happens if I downgrade?"
+            answer="Your projects are saved. On the free plan, you can access 1 project at a time. Upgrade to access all 10 again."
+          />
+        </div>
+      </div>
+
+      <!-- Trust & Security -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-heading font-bold text-steel-blue mb-6">Trust & Security</h2>
+        <div class="space-y-2">
+          <FAQItem
+            client:load
+            question="Is my data secure?"
+            answer="Yes. We use bank-level encryption (AES-256) and secure cloud hosting (Supabase). Your data is private and never shared."
+          />
+          <FAQItem
+            client:load
+            question="Do you sell my information?"
+            answer="Never. We're bootstrapped, not ad-supported. Your data is yours."
+          />
+          <FAQItem
+            client:load
+            question="Can I export my data?"
+            answer="Yes, download your plan as PDF or JSON."
+          />
+        </div>
+      </div>
+
+      <!-- Business Use -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-heading font-bold text-steel-blue mb-6">Business Use</h2>
+        <div class="space-y-2">
+          <FAQItem
+            client:load
+            question="Will investors accept a MyTinyCEO plan?"
+            answer="Yes! MyTinyCEO uses industry-standard frameworks and generates all the financial statements investors expect."
+          />
+          <FAQItem
+            client:load
+            question="Is this suitable for SBA loan applications?"
+            answer="Absolutely. Our bank loan template includes all SBA requirements (financial projections, debt analysis, risk mitigation)."
+          />
+          <FAQItem
+            client:load
+            question="Can banks or advisors use this with clients?"
+            answer="Yes! We're building a white-label/enterprise version for banks, accelerators, and advisors. Contact us to join the waitlist."
+          />
+        </div>
+      </div>
+
+      <!-- Technical -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-heading font-bold text-steel-blue mb-6">Technical</h2>
+        <div class="space-y-2">
+          <FAQItem
+            client:load
+            question="What devices does MyTinyCEO work on?"
+            answer="Any device with a modern web browser (desktop, tablet, mobile)."
+          />
+          <FAQItem
+            client:load
+            question="Do I need to download anything?"
+            answer="Nope! It's 100% web-based."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-heading font-bold text-steel-blue mb-4">Still have questions?</h2>
+      <p class="text-charcoal mb-6">We're here to help!</p>
+      <a href="/contact" class="btn-primary inline-block">Contact Us</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

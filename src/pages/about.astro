@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="About - MyTinyCEO"
+  description="Hi, I'm Steve Dickens. I built MyTinyCEO because I needed it for my own startup."
+>
+  <Header />
+
+  <!-- Hero -->
+  <section class="py-20 bg-gradient-to-br from-[#1e3a5f] to-[#1B6B6B] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
+        Hi, I'm Steve Dickens.<br/>I Built This Because I Needed It.
+      </h1>
+      <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg w-48 h-48 mx-auto flex items-center justify-center text-gray-200 border border-white border-opacity-20">
+        Photo Placeholder
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem I Faced -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-steel-blue mb-6">The Problem I Faced</h2>
+      <div class="prose max-w-none text-charcoal font-body space-y-4">
+        <p class="text-lg leading-relaxed">
+          I'm a third-generation bricklayer who grew up in a diverse, hard-working environment. Eventually, I graduated summa cum laude with a technology degree and built a career in computer science and operations leadership.
+        </p>
+        <p class="text-lg leading-relaxed">
+          Today, I'm the COO for an architectural precast concrete company in North Carolina. We needed a software solution to track production and analyze our business. I spent six months searching, meeting with developers, weighing costs and benefits—but everything was expensive, built on outdated tech, and didn't do exactly what we needed.
+        </p>
+        <p class="text-lg leading-relaxed">
+          So I built it myself. That's how 4Cast Concrete was born.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I Built MyTinyCEO -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-steel-blue mb-6">How I Built MyTinyCEO</h2>
+      <div class="prose max-w-none text-charcoal font-body space-y-4">
+        <p class="text-lg leading-relaxed">
+          Once 4Cast Concrete was ready to launch, I needed to talk to investors and lenders for fundraising. But I don't have a background in elite business or finance. When I started preparing a business plan, I realized I needed help.
+        </p>
+        <p class="text-lg leading-relaxed">
+          Instead of hiring a CEO, I decided to program my own. I built MyTinyCEO as a tool to help me understand the value of my product and figure out how much money I could pay back before taking on debt or investors.
+        </p>
+        <p class="text-lg leading-relaxed">
+          I researched proven business frameworks from top business schools like TAM/SAM/SOM, Value Stick Analysis, and Unit Economics. I wanted my plan to be investor-grade, not just "good enough." But I also wanted it to be accessible—I'm not a finance person, so why should other founders need to be?
+        </p>
+        <p class="text-lg leading-relaxed">
+          That's when I added Tiny, the AI mentor. Tiny explains everything in plain English and answers questions in context. After months of building (and using it for my own business), I realized: other founders need this too.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Vision -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-steel-blue mb-6">My Vision</h2>
+      <div class="prose max-w-none text-charcoal font-body space-y-4">
+        <p class="text-lg leading-relaxed">
+          MyTinyCEO isn't just a tool—it's a movement.
+        </p>
+        <p class="text-lg leading-relaxed">
+          Business planning shouldn't require an MBA. Financial education should be accessible. And AI can democratize what used to be reserved for those who could afford consultants.
+        </p>
+        <p class="text-lg leading-relaxed">
+          I want MyTinyCEO to become the standard. Like how investors say "send me your pitch deck," I want them to say "show me your MyTinyCEO plan."
+        </p>
+        <p class="text-lg leading-relaxed">
+          I want banks to require it for loan applicants—because it ensures quality and completeness. Think CarFax, but for business plans.
+        </p>
+        <p class="text-lg leading-relaxed">
+          I'm building this in public. I'm bootstrapping (no VC funding—yet). And I'm using MyTinyCEO to plan my own growth.
+        </p>
+        <p class="text-lg leading-relaxed font-semibold">
+          If you're a founder who's ever felt overwhelmed by spreadsheets, this tool is for you.
+        </p>
+        <p class="text-right italic mt-8">— Steve Dickens</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Details -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-steel-blue mb-8 text-center">Get in Touch</h2>
+      <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div class="bg-white rounded-lg p-6 text-center">
+          <div class="text-3xl mb-2">📧</div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Email</h3>
+          <a href="mailto:steve@4castconcrete.com" class="text-tech-teal hover:underline">steve@4castconcrete.com</a>
+        </div>
+        <div class="bg-white rounded-lg p-6 text-center">
+          <div class="text-3xl mb-2">💼</div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">My Company</h3>
+          <a href="https://4castconcrete.com" target="_blank" rel="noopener noreferrer" class="text-tech-teal hover:underline">4Cast Concrete Solutions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4Cast Mission & Values -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-steel-blue mb-6 text-center">About 4Cast Concrete Solutions LLC</h2>
+
+      <div class="bg-[#0a0f14] rounded-lg p-2 mb-8">
+        <div class="bg-[#1a252f] rounded-lg p-8">
+          <h3 class="font-heading font-semibold text-xl mb-4 text-white">Our Mission</h3>
+          <p class="text-lg text-white font-medium">
+            To offer technological solutions for underserved, niche manufacturers such as architectural precast concrete to scale, increase their efficiency, and have a clearer understanding of business outlooks and analytics.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h3 class="font-heading font-semibold text-xl text-steel-blue mb-4 text-center">Our Values</h3>
+        <p class="text-center text-charcoal text-lg font-semibold mb-4">
+          Intelligence, Necessity, Structure, Perseverance, Innovation, Resilience, Empathy, and Design
+        </p>
+        <p class="text-center text-tech-teal text-2xl font-heading font-bold">
+          We are INSPIRED!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

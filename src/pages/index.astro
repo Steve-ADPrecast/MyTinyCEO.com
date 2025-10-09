@@ -1,16 +1,307 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import FeatureCard from '../components/FeatureCard.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="MyTinyCEO - AI-Powered Business Planning for Founders">
+  <Header />
+
+  <!-- Hero Section -->
+  <Hero
+    headline="Build Your Business Plan Like a Pro—No MBA Required"
+    subheadline="The AI-powered planning tool I built for my own startup. Now helping solopreneurs turn ideas into investor-ready plans."
+  />
+
+  <!-- Problem/Solution Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-steel-blue mb-4">
+          The Old Way vs. The MyTinyCEO Way
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Old Way -->
+        <div class="bg-red-50 rounded-lg p-8">
+          <h3 class="text-2xl font-heading font-semibold text-red-800 mb-6">The Old Way ❌</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-red-600 mr-3">❌</span>
+              <span class="text-charcoal">Excel templates that break</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-600 mr-3">❌</span>
+              <span class="text-charcoal">Generic cookie-cutter advice</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-600 mr-3">❌</span>
+              <span class="text-charcoal">$5,000+ consultants</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- MyTinyCEO Way -->
+        <div class="bg-green-50 rounded-lg p-8">
+          <h3 class="text-2xl font-heading font-semibold text-green-800 mb-6">The MyTinyCEO Way ✅</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-green-600 mr-3">✅</span>
+              <span class="text-charcoal">AI that understands YOUR business</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-3">✅</span>
+              <span class="text-charcoal">Industry-standard frameworks, plain English</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-3">✅</span>
+              <span class="text-charcoal">Professional outputs in hours</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3 Icon Cards -->
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <FeatureCard
+          icon="🤖"
+          title="AI Co-Pilot (Tiny)"
+          description="Your personal business strategist available 24/7 to answer questions and guide you through every step."
+        />
+        <FeatureCard
+          icon="📊"
+          title="Industry-Standard Methods"
+          description="Built on proven frameworks from top business schools—TAM/SAM/SOM, Value Stick, Unit Economics."
+        />
+        <FeatureCard
+          icon="📄"
+          title="Export-Ready Plans"
+          description="Generate investor pitch decks, bank loan packages, and shareable dashboards with one click."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Story Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4 text-center">
+          "I Built This For Me"
+        </h2>
+        <div class="prose max-w-none text-charcoal font-body">
+          <p class="text-lg leading-relaxed mb-4">
+            I was drowning in spreadsheets trying to build my business plan. I'm a technologist and COO, not a CFO.
+            So I built the tool I wished existed.
+          </p>
+          <p class="text-lg leading-relaxed mb-4">
+            This isn't a side project—it's the tool I use for my own startup. Every feature exists because I needed it.
+            Now I'm sharing it with you.
+          </p>
+          <div class="text-center mt-8">
+            <a href="/about" class="text-tech-teal hover:text-steel-blue font-semibold text-lg transition-colors">
+              Read my full story →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Section -->
+  <section class="py-12 bg-[#0a0f14] text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-3xl mb-2">✅</div>
+          <p class="font-semibold text-white">Built on proven methodologies</p>
+          <p class="text-sm text-white font-medium">(Top Business Schools)</p>
+        </div>
+        <div>
+          <div class="text-3xl mb-2">✅</div>
+          <p class="font-semibold text-white">Reviewed by finance professionals</p>
+          <p class="text-sm text-white font-medium">Industry-standard frameworks</p>
+        </div>
+        <div>
+          <div class="text-3xl mb-2">✅</div>
+          <p class="font-semibold text-white">Built by a founder, for founders</p>
+          <p class="text-sm text-white font-medium">Real-world tested</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Highlights -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-steel-blue text-center mb-12">
+        Powerful Features, Simple Interface
+      </h2>
+
+      <div class="space-y-16">
+        <!-- Feature 1 -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4">
+              AI Business Model Detection
+            </h3>
+            <p class="text-charcoal mb-4">
+              Just describe your idea. Tiny customizes everything for your business model (SaaS, marketplace,
+              e-commerce, etc.)
+            </p>
+          </div>
+          <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
+            <p class="text-gray-500 text-sm">Screenshot placeholder</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1 bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
+            <p class="text-gray-500 text-sm">Screenshot placeholder</p>
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4">
+              Smart Market Research
+            </h3>
+            <p class="text-charcoal mb-4">
+              Don't know your TAM/SAM/SOM? Tiny researches it for you using AI-powered market analysis
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4">
+              Scenario Planning
+            </h3>
+            <p class="text-charcoal mb-4">
+              Model best-case, worst-case, and realistic scenarios like professional investors do
+            </p>
+          </div>
+          <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
+            <p class="text-gray-500 text-sm">Screenshot placeholder</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-steel-blue text-center mb-12">
+        How It Works
+      </h2>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-[#1B7B7B] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+            1
+          </div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Describe your business</h3>
+          <p class="text-sm text-charcoal">2 minutes</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-[#1B7B7B] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+            2
+          </div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Answer guided questions</h3>
+          <p class="text-sm text-charcoal">30 minutes</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-[#1B7B7B] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+            3
+          </div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Let AI fill in the gaps</h3>
+          <p class="text-sm text-charcoal">Instant</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-[#1B7B7B] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+            4
+          </div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Export your plan</h3>
+          <p class="text-sm text-charcoal">PDF, dashboard, pitch deck</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/product" class="btn-primary inline-block">
+          See How It Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Teaser -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-steel-blue text-center mb-12">
+        Simple Pricing
+      </h2>
+
+      <div class="text-center mb-8">
+        <span class="bg-tech-teal text-white px-4 py-2 rounded-full text-sm font-semibold">
+          Launching November 2025
+        </span>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 opacity-75">
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">Free</h3>
+          <p class="text-3xl font-bold text-charcoal mb-4">$0</p>
+          <ul class="text-sm text-charcoal space-y-2 mb-6">
+            <li>1 project</li>
+            <li>All features</li>
+            <li>Watermarked exports</li>
+          </ul>
+        </div>
+        <div class="bg-[#1B7B7B] text-white rounded-lg p-6 text-center transform scale-105">
+          <h3 class="text-xl font-heading font-bold mb-2">Monthly Pro</h3>
+          <p class="text-3xl font-bold mb-4">$32<span class="text-sm">/mo</span></p>
+          <ul class="text-sm space-y-2 mb-6">
+            <li>10 projects</li>
+            <li>PDF exports</li>
+            <li>No watermark</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">Annual Pro</h3>
+          <p class="text-3xl font-bold text-charcoal mb-4">$340<span class="text-sm">/yr</span></p>
+          <ul class="text-sm text-charcoal space-y-2 mb-6">
+            <li>Save $44/year</li>
+            <li>10 projects</li>
+            <li>All Pro features</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/pricing" class="text-tech-teal hover:text-steel-blue font-semibold transition-colors">
+          View Full Pricing →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 bg-[#0a0f14] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4 text-white">
+        Join Founders Building Smarter Plans
+      </h2>
+      <p class="text-xl mb-8 text-white font-medium">
+        Launching November 2025. Be ready to transform your business idea into reality.
+      </p>
+      <a href="/contact" class="bg-[#1B7B7B] text-white font-cta font-medium px-8 py-3 rounded-lg hover:bg-[#156565] transition-colors inline-block shadow-lg">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

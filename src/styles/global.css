@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+/* Custom CSS Variables */
+:root {
+  /* Colors */
+  --color-steel-blue: #4B7DAA;
+  --color-tech-teal: #2DA3A3;
+  --color-soft-olive: #6B7B5C;
+  --color-accent-olive: #6B8545;
+  --color-charcoal: #2C3E50;
+  --color-charcoal-alt: #1a252f;
+  --color-off-white: #F8F9FA;
+
+  /* Typography */
+  --font-heading: "Montserrat Alternates", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-cta: "Poppins", sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background-color: var(--color-off-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-steel-blue);
+}
+
+/* Utility classes */
+.btn-primary {
+  font-family: var(--font-cta);
+  font-weight: 500;
+  background-color: var(--color-tech-teal);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #258888;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 163, 163, 0.3);
+}
+
+.text-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-steel-blue);
+}
+
+.text-subheading {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-charcoal);
+}
+
+/* Override Tailwind's light grays for better contrast */
+.text-gray-500 {
+  color: #6b7280 !important; /* Darker gray-600 */
+}
+
+.text-gray-400 {
+  color: #6b7280 !important; /* Same as above for consistency */
+}
+
+.text-gray-300 {
+  color: #9ca3af !important; /* Slightly lighter but still readable */
+}

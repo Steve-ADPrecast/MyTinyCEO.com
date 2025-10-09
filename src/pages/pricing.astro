@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PricingCard from '../components/PricingCard.astro';
+---
+
+<Layout
+  title="Pricing - MyTinyCEO"
+  description="Simple, transparent pricing for MyTinyCEO. Free plan available. Pro plans start at $32/month."
+>
+  <Header />
+
+  <section class="py-20 bg-gradient-to-br from-[#1e3a5f] to-[#1B6B6B] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="bg-tech-teal text-white px-4 py-2 rounded-full text-sm font-semibold inline-block mb-6 shadow-lg">
+        Launching November 2025
+      </div>
+      <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 text-white">Simple, Transparent Pricing</h1>
+      <p class="text-xl text-white opacity-95">Choose the plan that fits your needs</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <PricingCard
+          tier="Free"
+          price="$0"
+          period="forever"
+          features={[
+            "1 project",
+            "AI Mentor (Tiny)",
+            "All planning features",
+            "Shareable dashboard links",
+            "Watermarked PDF exports"
+          ]}
+        />
+        <PricingCard
+          tier="Monthly Pro"
+          price="$32"
+          period="month"
+          recommended={true}
+          features={[
+            "10 projects",
+            "AI Mentor (Tiny)",
+            "All planning features",
+            "Unlimited PDF exports",
+            "No watermarks",
+            "Priority support",
+            "Version history"
+          ]}
+        />
+        <PricingCard
+          tier="Annual Pro"
+          price="$340"
+          period="year"
+          features={[
+            "Save $44/year",
+            "10 projects",
+            "All Pro features",
+            "Unlimited PDF exports",
+            "No watermarks",
+            "Priority support",
+            "Version history"
+          ]}
+        />
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="max-w-3xl mx-auto mt-20">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue text-center mb-12">Pricing FAQ</h2>
+
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-heading font-semibold text-steel-blue mb-2">Can I upgrade or downgrade anytime?</h3>
+            <p class="text-charcoal text-sm">Yes! Change plans instantly from your dashboard.</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-heading font-semibold text-steel-blue mb-2">What happens to my projects if I downgrade?</h3>
+            <p class="text-charcoal text-sm">Your projects are safe. You'll just be limited to 1 active project on the free plan. Upgrade anytime to access all 10.</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-heading font-semibold text-steel-blue mb-2">Do you offer refunds?</h3>
+            <p class="text-charcoal text-sm">Yes, 30-day money-back guarantee, no questions asked.</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-heading font-semibold text-steel-blue mb-2">Is my data secure?</h3>
+            <p class="text-charcoal text-sm">Yes. Bank-level encryption, secure database. We never sell your data.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Teaser -->
+      <div class="max-w-4xl mx-auto mt-20">
+        <div class="bg-[#0a0f14] rounded-lg p-2">
+          <div class="bg-[#1a252f] rounded-lg p-12 text-center">
+            <h2 class="text-2xl font-heading font-bold text-white mb-4">Enterprise / White-Label</h2>
+            <p class="text-white font-medium mb-6">For banks, accelerators, and investors who want to standardize their portfolio companies on MyTinyCEO.</p>
+            <div class="space-y-2 text-sm text-white mb-6">
+              <p class="font-medium">✓ Custom branding</p>
+              <p class="font-medium">✓ Bulk licensing</p>
+              <p class="font-medium">✓ Admin dashboard</p>
+              <p class="font-medium">✓ API access</p>
+            </div>
+            <span class="bg-[#1B7B7B] text-white px-6 py-2 rounded-lg text-sm font-semibold cursor-not-allowed inline-block shadow-lg">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-16 text-center">
+        <div>
+          <div class="text-3xl mb-2">🔒</div>
+          <p class="text-sm font-semibold text-charcoal">Secure Payments</p>
+          <p class="text-xs text-gray-600">(Stripe)</p>
+        </div>
+        <div>
+          <div class="text-3xl mb-2">🛡️</div>
+          <p class="text-sm font-semibold text-charcoal">Data Encrypted</p>
+          <p class="text-xs text-gray-600">Bank-level</p>
+        </div>
+        <div>
+          <div class="text-3xl mb-2">🔄</div>
+          <p class="text-sm font-semibold text-charcoal">Cancel Anytime</p>
+          <p class="text-xs text-gray-600">No commitments</p>
+        </div>
+        <div>
+          <div class="text-3xl mb-2">✅</div>
+          <p class="text-sm font-semibold text-charcoal">30-Day Guarantee</p>
+          <p class="text-xs text-gray-600">Full refund</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

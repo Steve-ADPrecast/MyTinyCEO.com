@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+---
+
+<Layout
+  title="Product - MyTinyCEO"
+  description="Discover how MyTinyCEO combines AI mentorship with industry-standard business frameworks to help you build plans that actually work."
+>
+  <Header />
+
+  <Hero
+    headline="This Isn't Another Business Plan Template"
+    subheadline="MyTinyCEO combines AI mentorship with industry-standard business frameworks to help you build plans that actually work."
+    showCTA={false}
+  />
+
+  <!-- The Problem -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-steel-blue text-center mb-12">
+        The Problem With Traditional Tools
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <FeatureCard
+          icon="📊"
+          title="Excel Templates"
+          description="Assume you already know finance (you don't)"
+        />
+        <FeatureCard
+          icon="🤖"
+          title="AI Writing Tools"
+          description="Generate fluff, not financial rigor"
+        />
+        <FeatureCard
+          icon="💰"
+          title="Consultants"
+          description="Cost $5,000+ you don't have"
+        />
+        <FeatureCard
+          icon="📝"
+          title="Generic Software"
+          description="Doesn't understand YOUR business model"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- How MyTinyCEO Is Different -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-steel-blue text-center mb-16">
+        How MyTinyCEO Is Different
+      </h2>
+
+      <!-- Feature 1: Business Model Detection -->
+      <div class="mb-20">
+        <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4 text-center">
+          Intelligent Business Model Detection
+        </h3>
+        <p class="text-center text-charcoal max-w-3xl mx-auto mb-8">
+          SaaS? Marketplace? E-commerce? Consulting? Tiny analyzes your description and automatically
+          customizes the entire wizard for your business model. No more filling out irrelevant sections.
+        </p>
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+          <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
+            <p class="text-gray-500">Business Model Detection Screenshot</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: AI Mentor -->
+      <div class="mb-20">
+        <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4 text-center">
+          Your AI Mentor (Tiny)
+        </h3>
+        <p class="text-center text-charcoal max-w-3xl mx-auto mb-8">
+          Ask Tiny anything in plain English. Get instant, context-aware answers based on your actual business data.
+        </p>
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+          <div class="space-y-4 mb-6">
+            <div class="bg-tech-teal bg-opacity-10 rounded p-3">
+              <p class="text-sm text-charcoal">"What's TAM/SAM/SOM?"</p>
+            </div>
+            <div class="bg-tech-teal bg-opacity-10 rounded p-3">
+              <p class="text-sm text-charcoal">"Is my pricing too low?"</p>
+            </div>
+            <div class="bg-tech-teal bg-opacity-10 rounded p-3">
+              <p class="text-sm text-charcoal">"What gross margin should I target?"</p>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
+            <p class="text-gray-500">Tiny Chat Interface Screenshot</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3: Frameworks -->
+      <div class="mb-20">
+        <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4 text-center">
+          Industry-Standard Frameworks Made Simple
+        </h3>
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h4 class="font-heading font-semibold text-steel-blue mb-3">📊 TAM/SAM/SOM Market Sizing</h4>
+            <p class="text-sm text-charcoal">
+              Calculate your total addressable market using top-down, bottom-up, or value-theory methods.
+              Tiny can even research market data for you.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h4 class="font-heading font-semibold text-steel-blue mb-3">💰 Value Stick Pricing Analysis</h4>
+            <p class="text-sm text-charcoal">
+              Optimize pricing by understanding willingness-to-pay, costs, and value distribution.
+              AI suggests pricing based on competitors.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h4 class="font-heading font-semibold text-steel-blue mb-3">📈 Unit Economics Optimizer</h4>
+            <p class="text-sm text-charcoal">
+              Model customer acquisition costs, lifetime value, and payback period with circular feedback loops.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h4 class="font-heading font-semibold text-steel-blue mb-3">💵 Financial Projections</h4>
+            <p class="text-sm text-charcoal">
+              Generate 24-36 month P&L, cash flow, and balance sheets that investors and banks actually expect.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4: Auto-Fill -->
+      <div class="mb-20">
+        <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4 text-center">
+          AI Auto-Fill Everything
+        </h3>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="bg-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">🔍</div>
+            <h4 class="font-heading font-semibold text-steel-blue mb-2">Market Research</h4>
+            <p class="text-sm text-charcoal">Tiny researches your market size using industry data and competitive analysis</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">💲</div>
+            <h4 class="font-heading font-semibold text-steel-blue mb-2">Pricing Suggestions</h4>
+            <p class="text-sm text-charcoal">AI analyzes competitors and suggests optimal price points</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 text-center shadow-md">
+            <div class="text-4xl mb-3">📊</div>
+            <h4 class="font-heading font-semibold text-steel-blue mb-2">Financial Projections</h4>
+            <p class="text-sm text-charcoal">Builds projections based on your unit economics</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 5: Export -->
+      <div>
+        <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4 text-center">
+          Export Anywhere
+        </h3>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h4 class="font-heading font-semibold text-steel-blue mb-3">📄 PDF for Investors</h4>
+            <ul class="text-sm text-charcoal space-y-2">
+              <li>✓ Pitch deck format</li>
+              <li>✓ Professional layout</li>
+              <li>✓ No watermark (Pro)</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h4 class="font-heading font-semibold text-steel-blue mb-3">🏦 Bank Loan Package</h4>
+            <ul class="text-sm text-charcoal space-y-2">
+              <li>✓ SBA-friendly format</li>
+              <li>✓ Complete financials</li>
+              <li>✓ Debt analysis</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h4 class="font-heading font-semibold text-steel-blue mb-3">📊 Live Dashboard</h4>
+            <ul class="text-sm text-charcoal space-y-2">
+              <li>✓ Shareable link</li>
+              <li>✓ Real-time updates</li>
+              <li>✓ Read-only access</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Uses MyTinyCEO -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-steel-blue text-center mb-12">
+        Who Uses MyTinyCEO?
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-3">🚀</div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">First-Time Founders</h3>
+          <p class="text-sm text-charcoal">"I needed to understand my financials before pitching investors"</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-3">💼</div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Solopreneurs</h3>
+          <p class="text-sm text-charcoal">"I'm launching a side hustle and needed a professional plan"</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-3">🏪</div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Small Business Owners</h3>
+          <p class="text-sm text-charcoal">"I applied for an SBA loan and needed complete projections"</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-3">📊</div>
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Finance Professionals</h3>
+          <p class="text-sm text-charcoal">"I want my clients to use a standardized, rigorous tool"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-[#0a0f14] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4 text-white">
+        Ready to Build Your Plan?
+      </h2>
+      <p class="text-xl mb-8 text-white font-medium">
+        See why founders are ditching spreadsheets
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/pricing" class="bg-[#1B7B7B] text-white font-cta font-medium px-8 py-3 rounded-lg hover:bg-[#156565] transition-colors inline-block shadow-lg">
+          View Pricing
+        </a>
+        <a href="/contact" class="bg-transparent border-2 border-white text-white font-cta font-medium px-8 py-3 rounded-lg hover:bg-white hover:text-[#1B7B7B] transition-colors inline-block">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

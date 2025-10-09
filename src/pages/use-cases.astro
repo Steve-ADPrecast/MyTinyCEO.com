@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout
+  title="Use Cases - MyTinyCEO"
+  description="Whether you're pitching investors, applying for a loan, or just starting out—MyTinyCEO has you covered."
+>
+  <Header />
+
+  <Hero
+    headline="Built for Your Journey"
+    subheadline="Whether you're pitching investors, applying for a loan, or just starting out—MyTinyCEO has you covered."
+    showCTA={false}
+  />
+
+  <!-- Use Case 1: Seeking Venture Capital -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="text-4xl mb-4">🚀</div>
+          <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">Seeking Venture Capital</h2>
+          <p class="text-charcoal mb-6">
+            You've built an MVP. Now you need a pitch deck that shows you understand unit economics, market sizing, and financial projections.
+          </p>
+          <h3 class="font-heading font-semibold text-steel-blue mb-3">What MyTinyCEO Provides:</h3>
+          <ul class="space-y-2 text-charcoal">
+            <li>✅ TAM/SAM/SOM market sizing investors expect</li>
+            <li>✅ Scenario planning (best/base/worst case)</li>
+            <li>✅ Unit economics breakdown (CAC, LTV, payback period)</li>
+            <li>✅ 24-36 month financial projections</li>
+            <li>✅ Investor-ready PDF pitch deck</li>
+          </ul>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
+          <p class="text-gray-500">Scenario Planning Screenshot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Case 2: Applying for SBA Loan -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 bg-gray-200 rounded-lg p-4 aspect-video flex items-center justify-center">
+          <p class="text-gray-500">Financial Statements Screenshot</p>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="text-4xl mb-4">🏦</div>
+          <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">Applying for an SBA Loan</h2>
+          <p class="text-charcoal mb-6">
+            You need a professional business plan that shows the bank you're serious, prepared, and creditworthy.
+          </p>
+          <h3 class="font-heading font-semibold text-steel-blue mb-3">What MyTinyCEO Provides:</h3>
+          <ul class="space-y-2 text-charcoal">
+            <li>✅ Complete financial projections (P&L, cash flow, balance sheet)</li>
+            <li>✅ Debt affordability calculator</li>
+            <li>✅ Risk analysis and mitigation plans</li>
+            <li>✅ Bank-ready PDF export (no watermark)</li>
+            <li>✅ SBA-compliant format</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Case 3: Launching Your First Business -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="text-4xl mb-4">💡</div>
+          <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">Launching Your First Business</h2>
+          <p class="text-charcoal mb-6">
+            You're a solopreneur with a great idea but no finance background. You need clarity, not complexity.
+          </p>
+          <h3 class="font-heading font-semibold text-steel-blue mb-3">What MyTinyCEO Provides:</h3>
+          <ul class="space-y-2 text-charcoal">
+            <li>✅ Tiny AI mentor to explain everything in plain English</li>
+            <li>✅ Step-by-step wizard (no guessing)</li>
+            <li>✅ AI auto-fill for market research and pricing</li>
+            <li>✅ Professional plan you can show partners/advisors</li>
+            <li>✅ Templates for every business model</li>
+          </ul>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
+          <p class="text-gray-500">Tiny Chatbot Screenshot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Vision -->
+  <section class="py-16 bg-[#0a0f14] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="bg-[#1a252f] rounded-lg p-12">
+        <div class="text-4xl mb-4">📊</div>
+        <h2 class="text-3xl font-heading font-bold mb-4 text-white">For Finance Professionals & Investors</h2>
+        <p class="text-xl mb-6 text-white font-medium">
+          You're a banker, investor, or advisor who reviews dozens of business plans. Standardize your clients on a tool that ensures quality and completeness.
+        </p>
+        <h3 class="font-heading font-semibold text-white mb-4">The Vision:</h3>
+        <p class="mb-6 text-white font-medium">
+          Imagine requiring your portfolio companies or loan applicants to build their plans in MyTinyCEO—like CarFax for business plans. You get standardized, rigorous, comparable plans every time.
+        </p>
+        <div class="text-left max-w-md mx-auto mb-8 text-white">
+          <p class="mb-2 font-medium">✓ White-label version for banks/accelerators</p>
+          <p class="mb-2 font-medium">✓ Bulk licensing for advisors</p>
+          <p class="mb-2 font-medium">✓ Portfolio dashboard for investors</p>
+        </div>
+        <span class="bg-[#1B7B7B] text-white px-6 py-3 rounded-lg font-cta font-medium cursor-not-allowed inline-block shadow-lg">
+          Coming Soon
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

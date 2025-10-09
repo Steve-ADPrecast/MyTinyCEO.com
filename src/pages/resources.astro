@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout
+  title="Resources - MyTinyCEO"
+  description="Learn. Build. Grow. Free guides, founder insights, and tutorials to help you build a better business plan."
+>
+  <Header />
+
+  <Hero
+    headline="Learn. Build. Grow."
+    subheadline="Free guides, founder insights, and tutorials to help you build a better business plan."
+    showCTA={false}
+  />
+
+  <!-- Founder's Journal -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-steel-blue mb-12">Founder's Journal</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Blog Post Card -->
+        <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+          <div class="bg-gray-200 h-48 flex items-center justify-center">
+            <span class="text-gray-500">Featured Image</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">
+              <a href="/about" class="hover:text-tech-teal transition-colors">
+                How I Built My Business Plan (And Then Built This Tool)
+              </a>
+            </h3>
+            <p class="text-charcoal text-sm mb-4">
+              From drowning in spreadsheets to building the tool I wished existed. My journey from founder to founder-helping-founders.
+            </p>
+            <div class="flex justify-between items-center text-xs text-gray-500">
+              <span>5 min read</span>
+              <a href="/about" class="text-tech-teal hover:underline">Read More →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Placeholder for future posts -->
+        <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md opacity-50">
+          <div class="bg-gray-200 h-48 flex items-center justify-center">
+            <span class="text-gray-500">Coming Soon</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-bold text-charcoal mb-2">
+              Why I Quit Excel Spreadsheets
+            </h3>
+            <p class="text-charcoal text-sm mb-4">
+              Pain points of traditional tools, funny anecdotes, and what finally made me build MyTinyCEO.
+            </p>
+            <div class="flex justify-between items-center text-xs text-gray-500">
+              <span>Coming Soon</span>
+              <span>→</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md opacity-50">
+          <div class="bg-gray-200 h-48 flex items-center justify-center">
+            <span class="text-gray-500">Coming Soon</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-bold text-charcoal mb-2">
+              What Investors Actually Want to See
+            </h3>
+            <p class="text-charcoal text-sm mb-4">
+              Interviews with VCs and practical advice on building investor-ready business plans.
+            </p>
+            <div class="flex justify-between items-center text-xs text-gray-500">
+              <span>Coming Soon</span>
+              <span>→</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Guides -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-steel-blue mb-12">Quick Guides</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">📊 What is TAM/SAM/SOM?</h3>
+          <p class="text-sm text-charcoal mb-3">5-minute explainer on market sizing frameworks</p>
+          <span class="text-xs text-gray-500">Coming Soon</span>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">💰 How to Calculate Unit Economics</h3>
+          <p class="text-sm text-charcoal mb-3">Complete guide for SaaS founders</p>
+          <span class="text-xs text-gray-500">Coming Soon</span>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">📄 Business Plan Template vs. Software</h3>
+          <p class="text-sm text-charcoal mb-3">Which approach is right for you?</p>
+          <span class="text-xs text-gray-500">Coming Soon</span>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">🏦 SBA Loan Requirements</h3>
+          <p class="text-sm text-charcoal mb-3">Complete checklist for loan applications</p>
+          <span class="text-xs text-gray-500">Coming Soon</span>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">💡 Pricing with Value Stick</h3>
+          <p class="text-sm text-charcoal mb-3">Framework-based pricing strategy</p>
+          <span class="text-xs text-gray-500">Coming Soon</span>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">📈 Financial Projections Guide</h3>
+          <p class="text-sm text-charcoal mb-3">What investors expect to see</p>
+          <span class="text-xs text-gray-500">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glossary Teaser -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-steel-blue mb-6 text-center">Financial Terms for Non-Finance Founders</h2>
+      <p class="text-center text-charcoal mb-8">Coming soon: A complete glossary of business and financial terms, explained in plain English.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 opacity-50">
+        <div class="bg-gray-50 rounded p-4">
+          <h3 class="font-semibold text-charcoal">ARR - Annual Recurring Revenue</h3>
+        </div>
+        <div class="bg-gray-50 rounded p-4">
+          <h3 class="font-semibold text-charcoal">CAC - Customer Acquisition Cost</h3>
+        </div>
+        <div class="bg-gray-50 rounded p-4">
+          <h3 class="font-semibold text-charcoal">LTV - Lifetime Value</h3>
+        </div>
+        <div class="bg-gray-50 rounded p-4">
+          <h3 class="font-semibold text-charcoal">Unit Economics</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
