@@ -61,14 +61,16 @@ If you want better email deliverability and to send from @mytinyceo.com:
 
 ---
 
-## Step 3: Add API Key to Local Development
+## Step 3: Add Environment Variables to Local Development
 
 1. **Open the `.env` file** in the root of your project
    - File location: `/Website/.env`
 
-2. **Replace the placeholder with your actual API key:**
+2. **Configure all SendGrid environment variables:**
    ```
    SENDGRID_API_KEY=SG.your_actual_api_key_here
+   SENDGRID_FROM_EMAIL=noreply@4castconcrete.com
+   SENDGRID_TO_EMAIL=steve@4castconcrete.com
    ```
 
 3. **Save the file**
@@ -85,7 +87,7 @@ If you want better email deliverability and to send from @mytinyceo.com:
 
 ---
 
-## Step 4: Add API Key to Vercel (Production)
+## Step 4: Add Environment Variables to Vercel (Production)
 
 Once you've deployed your site to Vercel:
 
@@ -97,10 +99,25 @@ Once you've deployed your site to Vercel:
    - Click on **"Settings"** tab
    - Click on **"Environment Variables"** in the left sidebar
 
-3. **Add New Environment Variable**
-   - Click **"Add New"** button
+3. **Add All Three Environment Variables**
+
+   Add each variable by clicking **"Add New"** button:
+
+   **Variable 1:**
    - **Key:** `SENDGRID_API_KEY`
-   - **Value:** Paste your SendGrid API key (starts with `SG.`)
+   - **Value:** Your SendGrid API key (starts with `SG.`)
+   - **Environments:** Select all (Production, Preview, Development)
+   - Click **"Save"**
+
+   **Variable 2:**
+   - **Key:** `SENDGRID_FROM_EMAIL`
+   - **Value:** `noreply@4castconcrete.com`
+   - **Environments:** Select all (Production, Preview, Development)
+   - Click **"Save"**
+
+   **Variable 3:**
+   - **Key:** `SENDGRID_TO_EMAIL`
+   - **Value:** `steve@4castconcrete.com`
    - **Environments:** Select all (Production, Preview, Development)
    - Click **"Save"**
 
@@ -112,28 +129,20 @@ Once you've deployed your site to Vercel:
 
 ---
 
-## Step 5: Update Sender Email in Code (If Needed)
+## Step 5: Update Email Addresses (If Needed)
 
-If you verified a different email address than `noreply@mytinyceo.com`:
+The contact form is now configured to use environment variables. If you need to change email addresses:
 
-1. **Open:** `src/pages/api/contact.ts`
+**For Local Development:**
+1. Update the `.env` file with new email addresses
+2. Restart the dev server (`npm run dev`)
 
-2. **Find line with `from:`** (around line 42)
-   ```typescript
-   from: 'noreply@mytinyceo.com', // Must be a verified sender in SendGrid
-   ```
+**For Production (Vercel):**
+1. Go to your Vercel project settings
+2. Update the `SENDGRID_FROM_EMAIL` and/or `SENDGRID_TO_EMAIL` variables
+3. Redeploy the site
 
-3. **Change to your verified email:**
-   ```typescript
-   from: 'steve@4castconcrete.com', // Must be a verified sender in SendGrid
-   ```
-
-4. **Commit and push the change:**
-   ```bash
-   git add src/pages/api/contact.ts
-   git commit -m "Update SendGrid sender email"
-   git push
-   ```
+⚠️ **Remember:** The `SENDGRID_FROM_EMAIL` must be verified in SendGrid!
 
 ---
 

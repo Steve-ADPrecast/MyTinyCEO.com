@@ -1,6 +1,9 @@
 import type { APIRoute } from 'astro';
 import sgMail from '@sendgrid/mail';
 
+// Disable static pre-rendering for this API endpoint
+export const prerender = false;
+
 // Initialize SendGrid with API key from environment variables
 if (import.meta.env.SENDGRID_API_KEY) {
   sgMail.setApiKey(import.meta.env.SENDGRID_API_KEY);
@@ -26,7 +29,7 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    // Check if API key is configured
+    // Check if SendGrid is properly configured
     if (!import.meta.env.SENDGRID_API_KEY) {
       console.error('SENDGRID_API_KEY is not configured');
       return new Response(
@@ -41,10 +44,24 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    // Compose the email
+    if (!import.meta.env.SENDGRID_FROM_EMAIL || !import.meta.env.SENDGRID_TO_EMAIL) {
+      console.error('SendGrid email addresses not configured');
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'Email service not configured. Please try again later.'
+        }),
+        {
+          status: 500,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
+    }
+
+    // Compose the email using environment variables
     const emailContent = {
-      to: 'steve@4castconcrete.com', // Your email
-      from: 'noreply@mytinyceo.com', // Must be a verified sender in SendGrid
+      to: import.meta.env.SENDGRID_TO_EMAIL, // Recipient email from environment
+      from: import.meta.env.SENDGRID_FROM_EMAIL, // Verified sender email from environment
       replyTo: email, // User's email for easy replies
       subject: `MyTinyCEO Contact Form: ${category || 'General Question'}`,
       text: `
@@ -97,14 +114,22 @@ ${message}
     );
 
   } catch (error: any) {
+    // Log detailed error information for debugging
     console.error('Error sending email:', error);
+
+    // SendGrid errors include response body with details
+    if (error.response) {
+      console.error('SendGrid error response:', error.response.body);
+    }
 
     // Return error response
     return new Response(
       JSON.stringify({
         success: false,
         error: 'Failed to send message. Please try again or email directly.',
-        details: error.message
+        details: error.message,
+        // Include SendGrid error details in development
+        ...(import.meta.env.DEV && error.response?.body ? { sendgridError: error.response.body } : {})
       }),
       {
         status: 500,
