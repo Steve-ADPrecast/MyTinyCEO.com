@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import fourCastLogo from '../../public/screenshots/4CastLogo.png';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -53,18 +55,21 @@ const currentYear = new Date().getFullYear();
       <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <!-- 4Cast Logo/Branding -->
         <div class="flex items-center space-x-3">
-          <!-- Placeholder for 4Cast logo - will be replaced when logo is added -->
-          <div class="text-xs text-gray-400">
-            A product of
-            <a
-              href="https://4castconcrete.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-tech-teal hover:text-steel-blue transition-colors font-semibold ml-1"
-            >
-              4Cast Concrete Solutions LLC
-            </a>
-          </div>
+          <a
+            href="https://4castconcrete.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+          >
+            <Image
+              src={fourCastLogo}
+              alt="4Cast Concrete Solutions LLC Logo"
+              class="h-12 w-auto"
+            />
+            <span class="text-xs text-gray-400">
+              A product of <span class="text-tech-teal font-semibold">4Cast Concrete Solutions LLC</span>
+            </span>
+          </a>
         </div>
 
         <!-- Copyright -->

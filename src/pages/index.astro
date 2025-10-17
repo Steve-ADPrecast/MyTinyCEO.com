@@ -4,6 +4,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import FeatureCard from '../components/FeatureCard.astro';
+import { Image } from 'astro:assets';
+import businessModelImage from '../../public/screenshots/business-model-detection-interface.png';
+import marketResearchImage from '../../public/screenshots/smart-market-research-interface.png';
+import scenarioPlanningImage from '../../public/screenshots/scenario-planning-dashboard.png';
 ---
 
 <Layout title="MyTinyCEO - AI-Powered Business Planning for Founders">
@@ -153,15 +157,23 @@ import FeatureCard from '../components/FeatureCard.astro';
               e-commerce, etc.)
             </p>
           </div>
-          <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
-            <p class="text-gray-500 text-sm">Screenshot placeholder</p>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <Image
+              src={businessModelImage}
+              alt="AI business model detection interface for startups - MyTinyCEO automatically identifies SaaS, marketplace, e-commerce, and consulting business types"
+              class="w-full h-auto object-contain"
+            />
           </div>
         </div>
 
         <!-- Feature 2 -->
         <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div class="order-2 md:order-1 bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
-            <p class="text-gray-500 text-sm">Screenshot placeholder</p>
+          <div class="order-2 md:order-1 bg-white rounded-lg shadow-lg overflow-hidden">
+            <Image
+              src={marketResearchImage}
+              alt="Smart market research tool for entrepreneurs - AI-powered TAM SAM SOM market sizing calculator with automated competitive analysis"
+              class="w-full h-auto object-contain"
+            />
           </div>
           <div class="order-1 md:order-2">
             <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4">
@@ -183,8 +195,12 @@ import FeatureCard from '../components/FeatureCard.astro';
               Model best-case, worst-case, and realistic scenarios like professional investors do
             </p>
           </div>
-          <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
-            <p class="text-gray-500 text-sm">Screenshot placeholder</p>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <Image
+              src={scenarioPlanningImage}
+              alt="Financial scenario planning dashboard for small business - Compare best-case worst-case realistic revenue projections and cash flow forecasts"
+              class="w-full h-auto object-contain"
+            />
           </div>
         </div>
       </div>
@@ -257,7 +273,6 @@ import FeatureCard from '../components/FeatureCard.astro';
           <ul class="text-sm text-charcoal space-y-2 mb-6">
             <li>1 project</li>
             <li>All features</li>
-            <li>Watermarked exports</li>
           </ul>
         </div>
         <div class="bg-[#1B7B7B] text-white rounded-lg p-6 text-center transform scale-105">

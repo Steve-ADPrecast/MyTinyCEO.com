@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
+import { Image } from 'astro:assets';
+import scenarioPlanningImage from '../../public/screenshots/scenario-planning-dashboard.png';
+import financialStatementsImage from '../../public/screenshots/financial-statements-view.png';
+import tinyChatImage from '../../public/screenshots/Tiny-chat-interface.png';
 ---
 
 <Layout
@@ -36,8 +40,12 @@ import Hero from '../components/Hero.astro';
             <li>✅ Investor-ready PDF pitch deck</li>
           </ul>
         </div>
-        <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
-          <p class="text-gray-500">Scenario Planning Screenshot</p>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={scenarioPlanningImage}
+            alt="Scenario planning dashboard showing best case base case and worst case financial projections for investor pitch decks"
+            class="w-full h-auto object-contain"
+          />
         </div>
       </div>
     </div>
@@ -47,8 +55,12 @@ import Hero from '../components/Hero.astro';
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="order-2 md:order-1 bg-gray-200 rounded-lg p-4 aspect-video flex items-center justify-center">
-          <p class="text-gray-500">Financial Statements Screenshot</p>
+        <div class="order-2 md:order-1 bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={financialStatementsImage}
+            alt="Professional financial statements with P&L cash flow and balance sheet for SBA loan applications and bank financing"
+            class="w-full h-auto object-contain"
+          />
         </div>
         <div class="order-1 md:order-2">
           <div class="text-4xl mb-4">🏦</div>
@@ -88,8 +100,12 @@ import Hero from '../components/Hero.astro';
             <li>✅ Templates for every business model</li>
           </ul>
         </div>
-        <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
-          <p class="text-gray-500">Tiny Chatbot Screenshot</p>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={tinyChatImage}
+            alt="Tiny AI mentor chatbot answering business questions in plain English for first-time entrepreneurs and solopreneurs"
+            class="w-full h-auto object-contain"
+          />
         </div>
       </div>
     </div>

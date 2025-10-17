@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
+import { Image } from 'astro:assets';
+import featuredImage from '../../public/screenshots/featured-blog-image.png';
 ---
 
 <Layout
@@ -25,8 +27,12 @@ import Hero from '../components/Hero.astro';
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Blog Post Card -->
         <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-          <div class="bg-gray-200 h-48 flex items-center justify-center">
-            <span class="text-gray-500">Featured Image</span>
+          <div class="h-48 overflow-hidden">
+            <Image
+              src={featuredImage}
+              alt="AI-powered business planning tool for startups and entrepreneurs - Comprehensive financial projection software"
+              class="w-full h-full object-cover"
+            />
           </div>
           <div class="p-6">
             <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">
@@ -44,25 +50,28 @@ import Hero from '../components/Hero.astro';
           </div>
         </article>
 
-        <!-- Placeholder for future posts -->
-        <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md opacity-50">
-          <div class="bg-gray-200 h-48 flex items-center justify-center">
-            <span class="text-gray-500">Coming Soon</span>
+        <!-- New SBA Loan Post -->
+        <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+          <div class="h-48 bg-gradient-to-br from-steel-blue to-tech-teal flex items-center justify-center">
+            <span class="text-white text-6xl">🏦</span>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-heading font-bold text-charcoal mb-2">
-              Why I Quit Excel Spreadsheets
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">
+              <a href="/blog/sba-loan-requirements" class="hover:text-tech-teal transition-colors">
+                The Complete SBA Loan Requirements Checklist
+              </a>
             </h3>
             <p class="text-charcoal text-sm mb-4">
-              Pain points of traditional tools, funny anecdotes, and what finally made me build MyTinyCEO.
+              What I wish I knew before applying for funding—and how I built a tool to make it easier for other founders.
             </p>
             <div class="flex justify-between items-center text-xs text-gray-500">
-              <span>Coming Soon</span>
-              <span>→</span>
+              <span>12 min read</span>
+              <a href="/blog/sba-loan-requirements" class="text-tech-teal hover:underline">Read More →</a>
             </div>
           </div>
         </article>
 
+        <!-- Placeholder for future posts -->
         <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md opacity-50">
           <div class="bg-gray-200 h-48 flex items-center justify-center">
             <span class="text-gray-500">Coming Soon</span>

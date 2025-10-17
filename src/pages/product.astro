@@ -4,6 +4,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import FeatureCard from '../components/FeatureCard.astro';
+import { Image } from 'astro:assets';
+import businessModelImage from '../../public/screenshots/business-model-detection-interface.png';
+import tinyChatImage from '../../public/screenshots/Tiny-chat-interface.png';
 ---
 
 <Layout
@@ -66,10 +69,12 @@ import FeatureCard from '../components/FeatureCard.astro';
           SaaS? Marketplace? E-commerce? Consulting? Tiny analyzes your description and automatically
           customizes the entire wizard for your business model. No more filling out irrelevant sections.
         </p>
-        <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
-          <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
-            <p class="text-gray-500">Business Model Detection Screenshot</p>
-          </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
+          <Image
+            src={businessModelImage}
+            alt="AI-powered business plan software with intelligent business model detection for SaaS marketplace e-commerce and service businesses"
+            class="w-full h-auto object-contain"
+          />
         </div>
       </div>
 
@@ -81,21 +86,12 @@ import FeatureCard from '../components/FeatureCard.astro';
         <p class="text-center text-charcoal max-w-3xl mx-auto mb-8">
           Ask Tiny anything in plain English. Get instant, context-aware answers based on your actual business data.
         </p>
-        <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
-          <div class="space-y-4 mb-6">
-            <div class="bg-tech-teal bg-opacity-10 rounded p-3">
-              <p class="text-sm text-charcoal">"What's TAM/SAM/SOM?"</p>
-            </div>
-            <div class="bg-tech-teal bg-opacity-10 rounded p-3">
-              <p class="text-sm text-charcoal">"Is my pricing too low?"</p>
-            </div>
-            <div class="bg-tech-teal bg-opacity-10 rounded p-3">
-              <p class="text-sm text-charcoal">"What gross margin should I target?"</p>
-            </div>
-          </div>
-          <div class="bg-gray-100 rounded-lg p-4 aspect-video flex items-center justify-center">
-            <p class="text-gray-500">Tiny Chat Interface Screenshot</p>
-          </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
+          <Image
+            src={tinyChatImage}
+            alt="AI business mentor chatbot for entrepreneurs - Ask questions about financial planning unit economics and business strategy in plain English"
+            class="w-full h-auto object-contain"
+          />
         </div>
       </div>
 

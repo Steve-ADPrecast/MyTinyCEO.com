@@ -1,0 +1,568 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+import financialStatementsImage from '../../../public/screenshots/financial-statements-view.png';
+---
+
+<Layout
+  title="The Complete SBA Loan Requirements Checklist for Small Business Owners | MyTinyCEO"
+  description="A comprehensive guide to SBA loan requirements, documentation, and how to prepare your business plan. Learn from a founder who's been through it."
+  type="article"
+  publishedTime="2024-10-17T00:00:00Z"
+>
+  <Header />
+
+  <!-- Blog Post Header -->
+  <article class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Meta Info -->
+      <div class="mb-6">
+        <a href="/resources" class="text-tech-teal hover:underline text-sm">← Back to Resources</a>
+        <div class="flex items-center gap-4 mt-4 text-sm text-gray-600">
+          <span>By Steve Dickens</span>
+          <span>•</span>
+          <span>12 min read</span>
+          <span>•</span>
+          <span>October 2024</span>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl font-heading font-bold text-steel-blue mb-6">
+        The Complete SBA Loan Requirements Checklist for Small Business Owners
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-xl text-charcoal mb-8 leading-relaxed">
+        What I wish I knew before applying for funding—and how I built a tool to make it easier.
+      </p>
+
+      <!-- Featured Image Placeholder -->
+      <div class="bg-gray-100 rounded-lg p-8 mb-12 border-l-4 border-tech-teal">
+        <p class="text-lg italic text-charcoal">
+          "I spent weeks gathering documents, building spreadsheets, and trying to make sense of what banks actually wanted. Here's everything I learned—and how you can do it faster."
+        </p>
+      </div>
+
+      <!-- Introduction: Personal Story -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">My SBA Loan Journey</h2>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          When I decided to seek funding for 4Cast Concrete Solutions, my architectural precast concrete software company, I thought it would be straightforward. I had a solid business idea, years of industry experience, and the technical skills to build the product. How hard could getting a loan be?
+        </p>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          Turns out—pretty hard.
+        </p>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          The Small Business Administration (SBA) has incredible loan programs designed to help entrepreneurs like us. The SBA 7(a) loan program alone guarantees billions of dollars in loans every year. But here's the catch: the documentation requirements are extensive, and if you're not a finance person (I'm a technologist and COO, not a CFO), it can feel overwhelming.
+        </p>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          I spent weeks trying to piece together financial projections in Excel, researching industry benchmarks, and trying to figure out what "pro forma financial statements" even meant. I'd Google terms like "debt service coverage ratio" at midnight, trying to understand if my numbers made sense.
+        </p>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          That frustration is why I eventually built MyTinyCEO—an AI-powered business planning tool that generates all the financial documentation you need for an SBA loan application, explained in plain English. But before we talk about solutions, let me walk you through exactly what you need.
+        </p>
+      </div>
+
+      <!-- What is an SBA Loan -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">What is an SBA Loan?</h2>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          The SBA (Small Business Administration) doesn't actually lend you money directly. Instead, they partner with banks and lenders to <strong>guarantee</strong> a portion of your loan—typically up to 85%. This guarantee reduces the risk for lenders, making them more willing to approve loans for small businesses that might not otherwise qualify.
+        </p>
+
+        <div class="bg-blue-50 border-l-4 border-steel-blue p-6 rounded-lg my-6">
+          <h3 class="font-heading font-semibold text-steel-blue mb-2">Quick Definition</h3>
+          <p class="text-charcoal mb-0">
+            <strong>SBA Guarantee:</strong> The SBA promises to repay the lender a percentage of your loan if you default. This makes banks more comfortable lending to startups and small businesses.
+          </p>
+        </div>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          There are several types of SBA loans, but the most common are:
+        </p>
+
+        <ul class="list-disc pl-8 space-y-3 text-lg text-charcoal mb-6">
+          <li><strong>SBA 7(a) Loan:</strong> The most popular. Up to $5 million for working capital, equipment, real estate, or refinancing debt.</li>
+          <li><strong>SBA 504 Loan:</strong> Specifically for purchasing fixed assets like buildings or heavy equipment. Up to $5.5 million.</li>
+          <li><strong>SBA Microloan:</strong> Smaller loans up to $50,000 for startups and small businesses.</li>
+        </ul>
+
+        <p class="text-lg text-charcoal leading-relaxed">
+          For most small business owners and startups, the <strong>7(a) loan</strong> is what you'll be applying for, so that's what we'll focus on.
+        </p>
+      </div>
+
+      <!-- The Complete Requirements Checklist -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-6">The Complete SBA Loan Requirements Checklist</h2>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-6">
+          Here's everything you'll need. I've organized this based on what banks actually ask for, not just what the SBA website says. Trust me—there's a difference.
+        </p>
+
+        <!-- Section 1: Business Documents -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+          <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4">1. Business Formation Documents</h3>
+
+          <ul class="space-y-3 text-lg text-charcoal">
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Business License:</strong> Proof your business is legally registered in your state.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Articles of Incorporation or LLC Operating Agreement:</strong> Shows your business structure.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Business Lease or Deed:</strong> If you rent or own your business location.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Franchise Agreement:</strong> Only if you're operating a franchise.</span>
+            </li>
+          </ul>
+
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mt-4">
+            <p class="text-sm text-charcoal mb-0">
+              <strong>Pro Tip:</strong> If you're a new business without all these documents yet, don't panic. Some lenders work with startups, but you'll need an even stronger business plan to compensate.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 2: Financial Documents -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+          <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4">2. Financial Documents (The Big One)</h3>
+
+          <p class="text-charcoal mb-4">
+            This is where most people get stuck. Banks want to see that you understand your numbers and can realistically pay back the loan.
+          </p>
+
+          <ul class="space-y-3 text-lg text-charcoal">
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Business Tax Returns (Last 3 Years):</strong> If you're an existing business. Startups won't have these yet.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Personal Tax Returns (Last 3 Years):</strong> Yes, your personal taxes matter. Banks want to see you're financially responsible.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Personal Financial Statement:</strong> A list of all your assets (house, car, savings) and liabilities (debts, loans).</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Bank Statements (Last 3-6 Months):</strong> Both business and personal accounts.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Balance Sheet:</strong> A snapshot of what your business owns and owes.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Profit & Loss Statement (P&L):</strong> Shows your revenue and expenses over time.</span>
+            </li>
+          </ul>
+
+          <div class="bg-blue-50 border-l-4 border-steel-blue p-4 mt-4">
+            <h4 class="font-heading font-semibold text-steel-blue mb-2">Quick Definitions</h4>
+            <ul class="text-sm text-charcoal space-y-2 mb-0">
+              <li><strong>Balance Sheet:</strong> Think of it like a financial selfie. It shows what you own (assets), what you owe (liabilities), and what's left over (equity) at a specific point in time.</li>
+              <li><strong>P&L Statement:</strong> Like a movie of your finances. It shows income and expenses over a period (usually monthly or annually) to determine if you're profitable.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 3: Business Plan -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+          <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4">3. Comprehensive Business Plan</h3>
+
+          <p class="text-charcoal mb-4">
+            This is the most important document. Your business plan tells the story of your business and proves you can repay the loan.
+          </p>
+
+          <p class="text-charcoal mb-4 font-semibold">
+            Your business plan must include:
+          </p>
+
+          <ul class="space-y-3 text-lg text-charcoal">
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Executive Summary:</strong> A 1-2 page overview of your business, what you do, and why you need the loan.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Company Description:</strong> What problem you solve, who your customers are, and what makes you different.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Market Analysis:</strong> Who are your competitors? How big is your market? What's your target customer profile?</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Organization & Management:</strong> Who's running the company? What's their experience?</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Products or Services:</strong> Exactly what you're selling and how you make money.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Marketing & Sales Strategy:</strong> How will you find and keep customers?</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Financial Projections (24-36 months):</strong> This is critical. You need month-by-month projections showing revenue, expenses, cash flow, and profitability.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Funding Request:</strong> How much you need, what you'll use it for, and how you'll pay it back.</span>
+            </li>
+          </ul>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-4 mt-4">
+            <p class="text-sm text-charcoal mb-0">
+              <strong>Reality Check:</strong> Most business plan templates online are too generic. Banks can tell when you've just filled in a template. Your plan needs to show you've done real research and understand your numbers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 4: Additional Documents -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+          <h3 class="text-2xl font-heading font-bold text-steel-blue mb-4">4. Additional Documents</h3>
+
+          <ul class="space-y-3 text-lg text-charcoal">
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Resume or CV:</strong> Show your relevant experience and qualifications.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Collateral Documentation:</strong> If you're pledging assets (equipment, property, inventory) as collateral, you'll need appraisals and titles.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>Debt Schedule:</strong> A list of all current business debts, monthly payments, and balances owed.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>SBA Form 1919:</strong> Borrower Information Form (your lender will provide this).</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-tech-teal mr-3 mt-1">✓</span>
+              <span><strong>SBA Form 413:</strong> Personal Financial Statement (standard form for all owners with 20%+ ownership).</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- The Old Way vs. The MyTinyCEO Way -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-6">The Old Way vs. The MyTinyCEO Way</h2>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-6">
+          When I was preparing my loan application, I did everything manually. Here's what that looked like compared to how MyTinyCEO handles it today:
+        </p>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full border-collapse bg-white shadow-md rounded-lg overflow-hidden">
+            <thead>
+              <tr class="bg-steel-blue text-white">
+                <th class="px-6 py-4 text-left font-heading font-semibold">Task</th>
+                <th class="px-6 py-4 text-left font-heading font-semibold">The Old Way (Manual)</th>
+                <th class="px-6 py-4 text-left font-heading font-semibold">The MyTinyCEO Way</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-200">
+                <td class="px-6 py-4 font-semibold text-steel-blue">Financial Projections</td>
+                <td class="px-6 py-4 text-charcoal">Build 36-month P&L in Excel from scratch. Formulas break. Takes 2-3 weeks.</td>
+                <td class="px-6 py-4 text-charcoal">Answer guided questions. AI generates projections in minutes using your business model.</td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-steel-blue">Market Research</td>
+                <td class="px-6 py-4 text-charcoal">Google for hours trying to find TAM/SAM/SOM data. Guess at numbers.</td>
+                <td class="px-6 py-4 text-charcoal">Tiny (AI mentor) researches market size for you using current industry data.</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="px-6 py-4 font-semibold text-steel-blue">Cash Flow Statement</td>
+                <td class="px-6 py-4 text-charcoal">Manually track every inflow and outflow. Easy to miss things.</td>
+                <td class="px-6 py-4 text-charcoal">Auto-generated based on your revenue model and expense inputs.</td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-steel-blue">Understanding Terms</td>
+                <td class="px-6 py-4 text-charcoal">Google "What is EBITDA?" at midnight. Read confusing articles.</td>
+                <td class="px-6 py-4 text-charcoal">Ask Tiny anything in plain English. Get instant, context-aware answers.</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="px-6 py-4 font-semibold text-steel-blue">Loan Readiness</td>
+                <td class="px-6 py-4 text-charcoal">Pray your numbers are right. No way to validate.</td>
+                <td class="px-6 py-4 text-charcoal">Built-in checks against industry standards. Tiny flags potential issues.</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-steel-blue">Export for Bank</td>
+                <td class="px-6 py-4 text-charcoal">Copy-paste Excel sheets into Word. Formatting nightmare.</td>
+                <td class="px-6 py-4 text-charcoal">One-click PDF export with professional formatting. SBA-compliant.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+          <Image
+            src={financialStatementsImage}
+            alt="MyTinyCEO Financial Statements Dashboard showing automated P&L, cash flow, and balance sheet generation"
+            class="w-full h-auto object-contain"
+          />
+          <p class="text-sm text-gray-600 text-center py-3 italic">MyTinyCEO automatically generates all the financial statements banks require</p>
+        </div>
+      </div>
+
+      <!-- Real Example -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">Real Example: My 4Cast Concrete Application</h2>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          When I applied for funding for 4Cast Concrete, I needed to show:
+        </p>
+
+        <ul class="list-disc pl-8 space-y-3 text-lg text-charcoal mb-6">
+          <li>Market size for architectural precast concrete management software (a very niche industry)</li>
+          <li>Projected subscription revenue from manufacturers</li>
+          <li>Development costs and timeline</li>
+          <li>Customer acquisition strategy</li>
+          <li>Break-even analysis showing when I could start repaying the loan</li>
+        </ul>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          The hardest part? Proving my market assumptions were realistic. Banks don't want to see "we'll capture 10% of the market" without backing it up. I had to:
+        </p>
+
+        <ul class="list-disc pl-8 space-y-3 text-lg text-charcoal mb-6">
+          <li>Research how many precast concrete manufacturers exist in the U.S.</li>
+          <li>Estimate how many could afford software subscriptions</li>
+          <li>Show comparable SaaS companies in adjacent industries</li>
+          <li>Calculate realistic customer acquisition costs</li>
+        </ul>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-4">
+          This took me weeks. With MyTinyCEO, Tiny would've researched the market, suggested pricing based on industry comps, and generated financial scenarios (best case, worst case, realistic case) automatically.
+        </p>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg my-6">
+          <p class="text-charcoal mb-0">
+            <strong>The Result:</strong> I got the documentation together, but it took 6 weeks of nights and weekends. That's why I built MyTinyCEO—to help other founders do this in hours, not months.
+          </p>
+        </div>
+      </div>
+
+      <!-- Hypothetical Examples -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">More Examples: Other Business Models</h2>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-6">
+          Your SBA loan application will look different depending on your business model. Here are a few examples:
+        </p>
+
+        <!-- Example 1: E-commerce -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+          <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">Sarah's E-commerce Store</h3>
+          <p class="text-charcoal mb-3">
+            <strong>Business:</strong> Online store selling eco-friendly home goods<br/>
+            <strong>Loan Need:</strong> $75,000 for inventory and marketing
+          </p>
+          <p class="text-charcoal mb-3 font-semibold">What the bank wanted to see:</p>
+          <ul class="list-disc pl-6 text-charcoal space-y-2">
+            <li>Inventory turnover rates (how fast products sell)</li>
+            <li>Customer acquisition cost through ads</li>
+            <li>Profit margin per product</li>
+            <li>Seasonal sales patterns</li>
+            <li>Supplier agreements and payment terms</li>
+          </ul>
+        </div>
+
+        <!-- Example 2: Service Business -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+          <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">Marcus's Consulting Firm</h3>
+          <p class="text-charcoal mb-3">
+            <strong>Business:</strong> Marketing consulting for local businesses<br/>
+            <strong>Loan Need:</strong> $50,000 for hiring staff and equipment
+          </p>
+          <p class="text-charcoal mb-3 font-semibold">What the bank wanted to see:</p>
+          <ul class="list-disc pl-6 text-charcoal space-y-2">
+            <li>Client pipeline (current and projected clients)</li>
+            <li>Average project value and duration</li>
+            <li>Repeat client rate</li>
+            <li>Staff utilization rates (billable vs. non-billable hours)</li>
+            <li>Client contracts or letters of intent</li>
+          </ul>
+        </div>
+
+        <!-- Example 3: SaaS Startup -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+          <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">Alex's SaaS Startup</h3>
+          <p class="text-charcoal mb-3">
+            <strong>Business:</strong> Project management software for construction companies<br/>
+            <strong>Loan Need:</strong> $150,000 for product development and early sales
+          </p>
+          <p class="text-charcoal mb-3 font-semibold">What the bank wanted to see:</p>
+          <ul class="list-disc pl-6 text-charcoal space-y-2">
+            <li>Monthly recurring revenue (MRR) and growth rate</li>
+            <li>Customer lifetime value (LTV) and churn rate</li>
+            <li>Customer acquisition cost (CAC) and payback period</li>
+            <li>Unit economics showing path to profitability</li>
+            <li>Product development roadmap and beta customer testimonials</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Common Mistakes -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">5 Common Mistakes That Kill SBA Loan Applications</h2>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-6">
+          I've seen (and made) these mistakes. Avoid them:
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">1. Overly Optimistic Projections</h3>
+            <p class="text-charcoal mb-0">
+              "We'll hit $1 million in revenue by year 2!" Banks see through this. Your projections need to be backed by realistic assumptions. Show your work.
+            </p>
+          </div>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">2. Ignoring Your Competition</h3>
+            <p class="text-charcoal mb-0">
+              Saying "we have no competitors" is a red flag. Every business has competition, even if it's indirect. Show you understand your market.
+            </p>
+          </div>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">3. Poor Personal Credit</h3>
+            <p class="text-charcoal mb-0">
+              Your personal credit score matters. For SBA loans, you typically need a 680+ credit score. If yours is lower, work on improving it first.
+            </p>
+          </div>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">4. Vague Use of Funds</h3>
+            <p class="text-charcoal mb-0">
+              "We need $100k for growth" isn't good enough. Break it down: $40k for inventory, $30k for marketing, $20k for equipment, $10k for working capital.
+            </p>
+          </div>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-2">5. Missing Documents</h3>
+            <p class="text-charcoal mb-0">
+              Incomplete applications slow everything down. Use the checklist above and make sure you have everything before you apply.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- How MyTinyCEO Helps -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">How MyTinyCEO Makes This Easier</h2>
+
+        <p class="text-lg text-charcoal leading-relaxed mb-6">
+          After going through this process myself, I built MyTinyCEO to handle the hardest parts:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white border-2 border-tech-teal rounded-lg p-6">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">🤖 AI-Powered Financial Projections</h3>
+            <p class="text-charcoal">
+              Answer questions about your business, and Tiny generates 24-36 month P&L, cash flow, and balance sheets automatically. All SBA-compliant.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-tech-teal rounded-lg p-6">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">📊 Automated Market Research</h3>
+            <p class="text-charcoal">
+              Tiny researches your TAM/SAM/SOM using industry data, competitor analysis, and proven methodologies from top business schools.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-tech-teal rounded-lg p-6">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">💬 Plain English Explanations</h3>
+            <p class="text-charcoal">
+              Don't understand EBITDA or debt service coverage ratio? Ask Tiny. Get instant answers in context, based on YOUR actual numbers.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-tech-teal rounded-lg p-6">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">📄 One-Click Exports</h3>
+            <p class="text-charcoal">
+              Generate a complete, bank-ready business plan PDF with all required financial statements. No copy-paste, no formatting headaches.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-tech-teal rounded-lg p-6">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">✓ Built-In Validation</h3>
+            <p class="text-charcoal">
+              Tiny checks your assumptions against industry benchmarks and flags potential issues before you submit to the bank.
+            </p>
+          </div>
+
+          <div class="bg-white border-2 border-tech-teal rounded-lg p-6">
+            <h3 class="text-xl font-heading font-bold text-steel-blue mb-3">🎯 Business Model Detection</h3>
+            <p class="text-charcoal">
+              Describe your business once, and Tiny customizes the entire planning process for your specific business model (SaaS, e-commerce, service, etc.).
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-steel-blue to-tech-teal text-white rounded-lg p-8 text-center">
+          <h3 class="text-2xl font-heading font-bold mb-3">The Bottom Line</h3>
+          <p class="text-lg mb-0">
+            What took me 6 weeks to prepare manually, MyTinyCEO does in hours—with more accuracy and less stress.
+          </p>
+        </div>
+      </div>
+
+      <!-- Final Tips -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-3xl font-heading font-bold text-steel-blue mb-4">Final Tips for Your SBA Loan Application</h2>
+
+        <ul class="list-disc pl-8 space-y-3 text-lg text-charcoal">
+          <li><strong>Start early.</strong> Gathering documents takes longer than you think. Give yourself 2-3 months.</li>
+          <li><strong>Work with an SBA-preferred lender.</strong> They know the process and can guide you through it.</li>
+          <li><strong>Be conservative with projections.</strong> It's better to under-promise and over-deliver.</li>
+          <li><strong>Show skin in the game.</strong> Banks want to see you're investing your own money too. Expect to put down 10-20%.</li>
+          <li><strong>Tell your story.</strong> Don't just submit numbers. Explain why you're passionate about this business and why you're the right person to run it.</li>
+          <li><strong>Ask questions.</strong> If you don't understand something, ask your lender. There are no dumb questions.</li>
+        </ul>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="bg-[#0a0f14] text-white rounded-lg p-8 text-center">
+        <h2 class="text-3xl font-heading font-bold mb-4 text-white">Ready to Apply for Your SBA Loan?</h2>
+        <p class="text-lg mb-6 text-white">
+          MyTinyCEO is launching November 2025. If you're preparing for an SBA loan application and want early access, I'd love to hear from you.
+        </p>
+        <p class="text-lg mb-6 text-white">
+          I'm personally helping a small group of founders get their business plans and financial projections ready. Let's talk about your business.
+        </p>
+        <a href="/contact" class="bg-[#1B7B7B] text-white font-cta font-medium px-8 py-3 rounded-lg hover:bg-[#156565] transition-colors inline-block shadow-lg">
+          Contact Me for Early Access
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+  <Footer />
+</Layout>
